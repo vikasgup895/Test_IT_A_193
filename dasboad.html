@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        #dashboard {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .user-details {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border: 1px solid #ddd;
+            width: 80%;
+            margin: 0 auto;
+            min-height: 400px;
+        }
+
+        ul#userList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul#userList li a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        ul#userList li a:hover {
+            text-decoration: underline;
+        }
+
+        #sort-dropdown {
+            font-size: 20px;
+        }
+
+        button {
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #logout-button {
+            background-color: #dc3545;
+        }
+
+        #logout-button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div id="dashboard">
+        <h1>Dashboard</h1>
+        <h2 id="heading">Welcome</h2>
+    
+        <div class="user-details">
+            <button onclick="fetchdata()">Fetch Top 10 GitHub Users</button>
+            <select id="sort-dropdown">
+                <option value="default">Default</option>
+                <option value="alphabetical">Alphabetical</option>
+            </select>
+            <ul id="userList"></ul> 
+            <button id="logout-button">Logout</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
